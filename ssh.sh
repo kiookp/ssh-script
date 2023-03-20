@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# 安装 ufw
-apt-get update
-apt-get install ufw -y
-
-# 关闭防火墙
-ufw disable
-
 # 修改 ssh 配置
 sed -i 's/#PermitRootLogin no/PermitRootLogin yes/g' /etc/ssh/sshd_config
 sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
